@@ -1,0 +1,13 @@
+services:
+  - type: web
+    runtime: node
+    name: songstreet-io
+    repo: https://github.com/songstreetadmin/songstreet-io
+    branch: main
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+    autoDeploy: true
+    healthCheckPath: /

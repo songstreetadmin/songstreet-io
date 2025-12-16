@@ -1,8 +1,23 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #000000;
+  --foreground: #ffffff;
+
+  /* SongStreet Sovereign Palette */
+  --ss-void: #000000;
+  --ss-obsidian: #050505;
+  --ss-charcoal: #0a0a0a;
+  --ss-smoke: #141414;
+  --ss-ash: #1a1a1a;
+  --ss-silver: #888888;
+  --ss-pearl: #f5f5f5;
+  --ss-white: #ffffff;
+
+  /* Accent - Subtle, Timeless */
+  --ss-gold: #c9a962;
+  --ss-platinum: #e5e4e2;
+  --ss-accent: #d946ef;
 }
 
 @theme inline {
@@ -12,15 +27,331 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--ss-void);
+  color: var(--ss-white);
+  font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
+}
+
+/* Sovereign Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+::selection {
+  background: var(--ss-accent);
+  color: var(--ss-white);
+}
+
+/* ===== TYPOGRAPHY - Timeless & Readable ===== */
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.display-xl {
+  font-size: clamp(3.5rem, 12vw, 9rem);
+  font-weight: 200;
+  letter-spacing: -0.04em;
+  line-height: 0.95;
+}
+
+.display-lg {
+  font-size: clamp(2rem, 6vw, 4.5rem);
+  font-weight: 200;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+}
+
+.display-md {
+  font-size: clamp(1.25rem, 3vw, 2rem);
+  font-weight: 300;
+  letter-spacing: -0.01em;
+  line-height: 1.4;
+}
+
+.body-lg {
+  font-size: 1.0625rem;
+  font-weight: 300;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.body-sm {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.label {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+/* ===== SACRED SPACING - CECC ===== */
+
+.section-sovereign {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 12vh 0;
+}
+
+.container-sovereign {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 clamp(1.5rem, 6vw, 6rem);
+}
+
+/* Page sections with generous spacing */
+.section-page {
+  padding: clamp(4rem, 12vh, 8rem) 0;
+}
+
+.section-page-lg {
+  padding: clamp(6rem, 16vh, 12rem) 0;
+}
+
+/* Spacing utilities */
+.space-section {
+  margin-bottom: clamp(4rem, 10vh, 8rem);
+}
+
+.space-block {
+  margin-bottom: clamp(2rem, 5vh, 4rem);
+}
+
+.space-element {
+  margin-bottom: clamp(1rem, 2vh, 1.5rem);
+}
+
+/* ===== LINKS ===== */
+
+.link-sovereign {
+  color: inherit;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.link-sovereign:hover {
+  opacity: 0.5;
+}
+
+/* ===== BUTTONS ===== */
+
+.btn-sovereign {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.125rem 2.25rem;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: var(--ss-white);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-sovereign:hover {
+  background: var(--ss-white);
+  color: var(--ss-void);
+  border-color: var(--ss-white);
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.btn-ghost:hover {
+  color: var(--ss-white);
+}
+
+/* ===== DIVIDERS ===== */
+
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.06), transparent);
+}
+
+.divider-solid {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* ===== CARDS ===== */
+
+.card-sovereign {
+  background: rgba(255, 255, 255, 0.015);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-sovereign:hover {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+/* ===== ANIMATIONS ===== */
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-fade-in {
+  animation: fade-in 1s ease forwards;
+}
+
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+
+/* ===== NAV ===== */
+
+.nav-sovereign {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 1.75rem 0;
+  transition: all 0.4s ease;
+}
+
+.nav-sovereign.scrolled {
+  padding: 1rem 0;
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+/* ===== FOOTER ===== */
+
+.footer-sovereign {
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+  padding: clamp(4rem, 10vh, 8rem) 0 clamp(2rem, 5vh, 4rem);
+}
+
+/* ===== ARTIST AVATAR ===== */
+
+.artist-avatar {
+  width: 100%;
+  aspect-ratio: 1;
+  background: linear-gradient(135deg, rgba(255,255,255,0.02) 0%, rgba(255,255,255,0.005) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-weight: 200;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.25);
+  transition: all 0.5s ease;
+}
+
+.artist-avatar:hover {
+  background: linear-gradient(135deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.01) 100%);
+  border-color: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* ===== GRID GAPS - CECC ===== */
+
+.grid-cecc {
+  gap: 1px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.grid-cecc > * {
+  background: var(--ss-void);
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+  .container-sovereign {
+    padding: 0 1.25rem;
+  }
+
+  .section-sovereign {
+    padding: 8vh 0;
+    min-height: auto;
+  }
+
+  .section-page {
+    padding: clamp(3rem, 8vh, 5rem) 0;
+  }
+
+  .section-page-lg {
+    padding: clamp(4rem, 10vh, 6rem) 0;
+  }
 }
