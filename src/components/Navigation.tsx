@@ -11,6 +11,7 @@ const navLinks = [
   { name: "Intelligence", href: "/intelligence" },
   { name: "Catalog", href: "/catalog" },
   { name: "Technology", href: "/technology" },
+  { name: "AI Desk", href: "/ai-desk" },
 ];
 
 export function Navigation() {

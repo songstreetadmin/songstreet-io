@@ -12,6 +12,7 @@ const sections = [
   { number: "03", title: "Intelligence", description: "30 AI Agents", href: "/intelligence" },
   { number: "04", title: "Catalog", description: "The Foundation", href: "/catalog" },
   { number: "05", title: "Technology", description: "SONGIQ Platform", href: "/technology" },
+  { number: "06", title: "AI Desk", description: "Creative Workstation", href: "/ai-desk" },
 ];
 
 export default function Home() {
