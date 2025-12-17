@@ -1,13 +1,13 @@
 services:
   - type: web
-    runtime: node
+    runtime: static
     name: songstreet-io
     repo: https://github.com/songstreetadmin/songstreet-io
     branch: main
     buildCommand: npm install && npm run build
-    startCommand: npm start
-    envVars:
-      - key: NODE_ENV
-        value: production
+    staticPublishPath: ./out
     autoDeploy: true
-    healthCheckPath: /
+    headers:
+      - path: /*
+        name: Cache-Control
+        value: public, max-age=0, must-revalidate
