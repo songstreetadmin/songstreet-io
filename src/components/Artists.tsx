@@ -37,10 +37,10 @@ export function Artists() {
         >
           <p className="text-fuchsia-400 uppercase tracking-[0.3em] text-xs mb-4">The Roster</p>
           <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
-            13 Virtual Artists
+            19 vArtists
           </h2>
           <p className="text-white/50 text-lg max-w-2xl mx-auto">
-            A diverse roster of AI-powered virtual artists spanning genres from R&B to K-Pop,
+            A diverse roster of AI-powered vArtists spanning genres from R&B to K-Pop,
             Country to Afrobeats. Each with unique personas, voices, and creative visions.
           </p>
         </motion.div>

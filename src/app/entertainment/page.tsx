@@ -7,7 +7,7 @@ import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 
 const divisions = [
-  { title: "Artist Development", description: "Crafting the next generation of virtual artists." },
+  { title: "Artist Development", description: "Crafting the next generation of vArtists." },
   { title: "Music Production", description: "State-of-the-art production across genres." },
   { title: "Release Strategy", description: "Strategic rollout for maximum impact." },
   { title: "Distribution", description: "Global reach across every platform." },

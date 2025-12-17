@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "SongStreet Universe | AI-Powered Entertainment Ecosystem",
-  description: "13 Virtual Artists. 67 AI Agents. 286 Music Assets. The future of music entertainment powered by intelligence.",
-  keywords: ["SongStreet", "AI Music", "Virtual Artists", "Music Entertainment", "SONGIQ", "Charter Financial Trust"],
+  description: "19 vArtists. 67 AI Agents. 286 Music Assets. The future of music entertainment powered by intelligence.",
+  keywords: ["SongStreet", "AI Music", "vArtists", "Music Entertainment", "SONGIQ", "Charter Financial Trust"],
   authors: [{ name: "SongStreet Entertainment" }],
   openGraph: {
     title: "SongStreet Universe",

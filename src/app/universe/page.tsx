@@ -48,7 +48,7 @@ export default function UniversePage() {
             transition={{ duration: 0.6 }}
           >
             <p className="label mb-4">The Universe</p>
-            <h1 className="display-lg text-white mb-6">19 Virtual Artists</h1>
+            <h1 className="display-lg text-white mb-6">19 vArtists</h1>
             <p className="body-lg max-w-xl">
               Each artist in the SongStreet Universe has their own story,
               sound, and identity. Every character exists within a connected

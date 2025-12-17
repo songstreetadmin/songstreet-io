@@ -44,7 +44,7 @@ export function Contact() {
             {
               icon: Music,
               title: "Artists",
-              description: "Join our roster of virtual artists and leverage our AI-powered production pipeline.",
+              description: "Join our roster of vArtists and leverage our AI-powered production pipeline.",
               cta: "Apply Now",
               color: "#a855f7",
             },

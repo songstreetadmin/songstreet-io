@@ -7,7 +7,7 @@ import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 
 const sections = [
-  { number: "01", title: "Universe", description: "19 Virtual Artists", href: "/universe" },
+  { number: "01", title: "Universe", description: "19 vArtists", href: "/universe" },
   { number: "02", title: "Entertainment", description: "The Company", href: "/entertainment" },
   { number: "03", title: "Intelligence", description: "30 AI Agents", href: "/intelligence" },
   { number: "04", title: "Catalog", description: "The Foundation", href: "/catalog" },
@@ -37,7 +37,7 @@ export default function Home() {
             </h1>
 
             <p className="body-lg max-w-lg mb-12 opacity-0 animate-fade-up delay-200">
-              A universe of virtual artists, each with their own story,
+              A universe of vArtists, each with their own story,
               sound, and soul. Powered by intelligence. Built to last.
             </p>
 
@@ -114,7 +114,7 @@ export default function Home() {
         <div className="container-sovereign">
           <div className="grid grid-cols-3 gap-8 md:gap-16">
             {[
-              { value: "19", label: "Virtual Artists" },
+              { value: "19", label: "vArtists" },
               { value: "30", label: "AI Agents" },
               { value: "∞", label: "Possibilities" },
             ].map((stat, i) => (

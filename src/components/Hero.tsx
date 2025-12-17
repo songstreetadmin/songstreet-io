@@ -54,7 +54,7 @@ export function Hero() {
             transition={{ delay: 0.6 }}
             className="text-white/60 text-lg md:text-xl max-w-2xl mx-auto mb-12"
           >
-            13 Virtual Artists. 67 AI Agents. 286 Music Assets.
+            19 vArtists. 67 AI Agents. 286 Music Assets.
             One Unified Entertainment Ecosystem Powered by Intelligence.
           </motion.p>
 
