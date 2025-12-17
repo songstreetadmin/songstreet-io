@@ -2,20 +2,21 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 
 const artists = [
-  { id: "01", name: "The Neighbrs", genre: "R&B / Soul", status: "Lead" },
-  { id: "02", name: "Mason Stone", genre: "Country / Pop", status: "Priority" },
+  { id: "01", name: "The Neighbrs", genre: "R&B / Soul", status: "Lead", logo: "/artists/the-neighbrs.png" },
+  { id: "02", name: "Mason Stone", genre: "Country / Pop", status: "Priority", logo: "/artists/mason-stone.png" },
   { id: "03", name: "Macey Stone", genre: "Pop / Country", status: "Active" },
-  { id: "04", name: "Yuna Lee", genre: "K-Pop / R&B", status: "Active" },
+  { id: "04", name: "Yuna Lee", genre: "K-Pop / R&B", status: "Active", logo: "/artists/yuna-lee.png" },
   { id: "05", name: "Akanni", genre: "Afrobeats", status: "Active" },
   { id: "06", name: "Broken Vessels", genre: "Gospel / CCM", status: "Active" },
-  { id: "07", name: "Sierra Bello", genre: "Latin Pop", status: "Active" },
-  { id: "08", name: "Vincent Berry II", genre: "Hip-Hop / Soul", status: "Active" },
-  { id: "09", name: "Nia Udo", genre: "Afro-Soul", status: "Active" },
+  { id: "07", name: "Sierra Bello", genre: "Latin Pop", status: "Active", logo: "/artists/sierra-bello.png" },
+  { id: "08", name: "Vincent Berry II", genre: "Hip-Hop / Soul", status: "Active", logo: "/artists/vincent-berry-ii.png" },
+  { id: "09", name: "Nia Udo", genre: "Afro-Soul", status: "Active", logo: "/artists/nia-udo.png" },
   { id: "10", name: "Pierre Sunday", genre: "Jazz / Soul", status: "Active" },
   { id: "11", name: "Vnice", genre: "Electronic / Pop", status: "Active" },
   { id: "12", name: "Esi Isah", genre: "Afrobeats", status: "Development" },
@@ -66,9 +67,21 @@ export default function UniversePage() {
               >
                 <span className="label opacity-25 block mb-6">{artist.id}</span>
 
-                <div className="artist-avatar w-16 h-16 rounded-full mb-6">
-                  <span className="text-sm">{artist.name.charAt(0)}</span>
-                </div>
+                {artist.logo ? (
+                  <div className="relative w-32 h-32 mb-6 group-hover:scale-105 transition-transform duration-500">
+                    <Image
+                      src={artist.logo}
+                      alt={artist.name}
+                      fill
+                      className="object-contain"
+                      sizes="128px"
+                    />
+                  </div>
+                ) : (
+                  <div className="artist-avatar w-16 h-16 rounded-full mb-6">
+                    <span className="text-sm">{artist.name.charAt(0)}</span>
+                  </div>
+                )}
 
                 <h3 className="text-lg font-light text-white mb-2 group-hover:opacity-60 transition-opacity">
                   {artist.name}
