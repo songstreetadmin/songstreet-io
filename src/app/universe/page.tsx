@@ -69,12 +69,12 @@ export default function UniversePage() {
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.04 }}
-                className="group bg-black p-8 lg:p-10 cursor-pointer hover:bg-white/[0.015] transition-all duration-500"
+                className="group bg-black p-8 lg:p-10 cursor-pointer hover:bg-white/[0.015] transition-all duration-500 text-center"
               >
                 <span className="label opacity-25 block mb-6">{artist.id}</span>
 
                 {artist.logo ? (
-                  <div className="relative w-32 h-32 mb-6 group-hover:scale-105 transition-transform duration-500">
+                  <div className="relative w-32 h-32 mb-6 mx-auto group-hover:scale-105 transition-transform duration-500">
                     <Image
                       src={artist.logo}
                       alt={artist.name}
@@ -84,7 +84,7 @@ export default function UniversePage() {
                     />
                   </div>
                 ) : (
-                  <div className="artist-avatar w-16 h-16 rounded-full mb-6">
+                  <div className="artist-avatar w-16 h-16 rounded-full mb-6 mx-auto">
                     <span className="text-sm">{artist.name.charAt(0)}</span>
                   </div>
                 )}
