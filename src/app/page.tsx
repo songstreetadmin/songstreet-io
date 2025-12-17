@@ -7,7 +7,7 @@ import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 
 const sections = [
-  { number: "01", title: "Universe", description: "13 Virtual Artists", href: "/universe" },
+  { number: "01", title: "Universe", description: "19 Virtual Artists", href: "/universe" },
   { number: "02", title: "Entertainment", description: "The Company", href: "/entertainment" },
   { number: "03", title: "Intelligence", description: "30 AI Agents", href: "/intelligence" },
   { number: "04", title: "Catalog", description: "The Foundation", href: "/catalog" },
@@ -114,7 +114,7 @@ export default function Home() {
         <div className="container-sovereign">
           <div className="grid grid-cols-3 gap-8 md:gap-16">
             {[
-              { value: "13", label: "Virtual Artists" },
+              { value: "19", label: "Virtual Artists" },
               { value: "30", label: "AI Agents" },
               { value: "∞", label: "Possibilities" },
             ].map((stat, i) => (

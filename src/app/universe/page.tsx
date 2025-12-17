@@ -10,17 +10,23 @@ import { Footer } from "@/components/Footer";
 const artists = [
   { id: "01", name: "The Neighbrs", genre: "R&B / Soul", status: "Lead", logo: "/artists/the-neighbrs.png" },
   { id: "02", name: "Mason Stone", genre: "Country / Pop", status: "Priority", logo: "/artists/mason-stone.png" },
-  { id: "03", name: "Macey Stone", genre: "Pop / Country", status: "Active" },
+  { id: "03", name: "Macey Stone", genre: "Pop / Country", status: "Active", logo: "/artists/macey-stone.png" },
   { id: "04", name: "Yuna Lee", genre: "K-Pop / R&B", status: "Active", logo: "/artists/yuna-lee.png" },
-  { id: "05", name: "Akanni", genre: "Afrobeats", status: "Active" },
-  { id: "06", name: "Broken Vessels", genre: "Gospel / CCM", status: "Active" },
+  { id: "05", name: "Akanni", genre: "Afrobeats", status: "Active", logo: "/artists/akanni.png" },
+  { id: "06", name: "Broken Vessels", genre: "Gospel / CCM", status: "Active", logo: "/artists/broken-vessels.png" },
   { id: "07", name: "Sierra Bello", genre: "Latin Pop", status: "Active", logo: "/artists/sierra-bello.png" },
   { id: "08", name: "Vincent Berry II", genre: "Hip-Hop / Soul", status: "Active", logo: "/artists/vincent-berry-ii.png" },
   { id: "09", name: "Nia Udo", genre: "Afro-Soul", status: "Active", logo: "/artists/nia-udo.png" },
-  { id: "10", name: "Pierre Sunday", genre: "Jazz / Soul", status: "Active" },
-  { id: "11", name: "Vnice", genre: "Electronic / Pop", status: "Active" },
-  { id: "12", name: "Esi Isah", genre: "Afrobeats", status: "Development" },
-  { id: "13", name: "DNJR", genre: "Hip-Hop", status: "Development" },
+  { id: "10", name: "Pierre Sunday", genre: "Jazz / Soul", status: "Active", logo: "/artists/pierre-sunday.png" },
+  { id: "11", name: "Michael Jiminez", genre: "R&B / Hip-Hop", status: "Active", logo: "/artists/michael-jiminez.png" },
+  { id: "12", name: "DNJR", genre: "Hip-Hop", status: "Active", logo: "/artists/dnjr.png" },
+  { id: "13", name: "Divina Rispetto", genre: "Pop / Soul", status: "Active", logo: "/artists/divina-rispetto.png" },
+  { id: "14", name: "Paxton Jackson", genre: "Country / Rock", status: "Active", logo: "/artists/paxton-jackson.png" },
+  { id: "15", name: "Kiaro VxN", genre: "Electronic / Pop", status: "Active", logo: "/artists/kiaro-vxn.png" },
+  { id: "16", name: "Ikechukwu", genre: "Afrobeats", status: "Active", logo: "/artists/ikechukwu.png" },
+  { id: "17", name: "Lani Akinlami", genre: "Afro-Soul", status: "Active", logo: "/artists/lani-akinlami.png" },
+  { id: "18", name: "Space Galaxy", genre: "Electronic / Experimental", status: "Active", logo: "/artists/space-galaxy.png" },
+  { id: "19", name: "Moontime", genre: "Indie / Alternative", status: "Active", logo: "/artists/moontime.png" },
 ];
 
 export default function UniversePage() {
@@ -42,7 +48,7 @@ export default function UniversePage() {
             transition={{ duration: 0.6 }}
           >
             <p className="label mb-4">The Universe</p>
-            <h1 className="display-lg text-white mb-6">13 Virtual Artists</h1>
+            <h1 className="display-lg text-white mb-6">19 Virtual Artists</h1>
             <p className="body-lg max-w-xl">
               Each artist in the SongStreet Universe has their own story,
               sound, and identity. Every character exists within a connected
